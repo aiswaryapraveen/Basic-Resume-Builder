@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+   
+    <form id="details">
+        
+        <div class="personal-details">
+            <h2>Personal Details</h2>
+            <div class="person">
+            <label for="name">Name :</label>
+            <input type="text" id="name" required name="name" placeholder="enter your full name">
+            <label for="email">Email :</label>
+            <input type="email" name="email" placeholder="enter a valid email address" required>
+            <label for="number">Phone number : </label>
+            <input type="tel" id="number" name="number" placeholder="enter phone number"required>
+            </div>
+        </div>
+
+        <div class="obj-container">
+            <h2>Objective</h2>
+            <textarea type="text" name="obj" id="obj" placeholder="write your profile summary here..." required name="obj"></textarea>
+
+        </div>
+        
+        <div class="education-details">
+            <h2>Education Details</h2>
+            <div class="edu-container">
+                <div class="edu-details">
+                    <label for="course">Course/Degree :</label>
+                    <input type="text" name="course" required>
+                    <label for="uni">University/School</label>
+                    <input type="text" name="uni" required>
+                    <label for="grade">Grade :</label>
+                    <input type="text" name="grade" required>
+                    <label for="syear">Starting Year :</label>
+                    <input type="number" min="2015" max="2023" name="syear" required>
+                    <label for="eyear">Passing Year :</label>
+                    <input type="number" min="2015" max="2030" name="eyear" required>
+                    <div class="but-container">
+                    <button type="button" class="remove" onclick="removeEducation(this)">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="but-container">
+                <button type="button" class="add" onclick="addEducation()"> Add</button>
+            </div>
+        </div>
+        <div class="skill-lang">
+        <div class="skills">
+            <h2>Skills</h2> 
+            <div class="skill-container">
+                <div class="skill">
+                    
+                </div>
+            </div>
+            <div class="but-container">
+                <button type="button" class="add" onclick="addSkill()"> Add </button>
+            </div>
+        </div>
+        <div class="languages">
+            <h2>Languages</h2> 
+            <div class="lang-container">
+                <div class="lang">
+                    
+                    
+                </div>
+            </div>
+            <div class="but-container">
+                <button type="button" class="add" onclick="addLang()"> Add </button>
+            </div>
+        </div>
+        </div>
+        <div class="Projects">
+            <h2>Projects</h2>
+            <div class="proj-container">
+                <div class="project">
+                    <div class="pro-title">
+                        <label for="pro-title">Project Title : </label> 
+                        <input type="text" name="pro-title">
+                    </div>
+                    <div class="pro-desc">
+                        <label for="pro-desc">Description : </label>
+                        <textarea name="pro-desc"></textarea>
+                    </div>
+                    <div class="but-container">
+                        <button type="button" class="remove" onclick="removeProj(this)"> Delete </button>
+                    </div>
+                    <div class="but-container">
+                        <button type="button" class="add" onclick="addProj()"> Add </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="cert-ach-extra">
+            <div class="certifications">
+                <h2>Certifications</h2> 
+                <div class="certification-container">
+                    <div class="certification">
+                        
+                    </div>
+                </div>
+                <div class="but-container">
+                    <button type="button" class="add" onclick="addCert()"> Add </button>
+                </div>
+            </div>
+            <div class="achievements">
+                <h2>Achievements</h2> 
+                <div class="achie-container">
+                    <div class="achievement">
+                        
+                        
+                    </div>
+                </div>
+                <div class="but-container">
+                    <button type="button" class="add" onclick="addAch()"> Add </button>
+                </div>
+            </div>
+            <div class="extras">
+                <h2>Extracurricular Activities</h2> 
+                <div class="extra-container">
+                    <div class="extra">
+                        
+                        
+                    </div>
+                </div>
+                <div class="but-container">
+                    <button type="button" class="add" onclick="addExtra()"> Add </button>
+                </div>
+            </div>
+            </div>
+    </form>
+    <div class="end">
+    <button type="button" class="generate" onclick="generateResume()">
+        <i class="material-icons">description</i>
+    </button>
+    <button type="button" class="download" onclick="downloadPDF()">
+        <i class="material-icons">get_app</i>
+    </button>
+    </div>
+    <div id="resume-preview">
+        <div class="resume-content">
+            <div class="full-name">
+
+            </div>
+            <hr>
+            
+            <div class="main">
+                <div class="left">
+
+                </div>
+                <div class="right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>   
+<script src="script.js"></script>  
+</body>
+</html>
