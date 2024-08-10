@@ -14,7 +14,8 @@ function addEducation() {
         <label for="eyear">Passing Year :</label>
         <input type="number" min="2015" max="2030" name="eyear" required>
         <div class="but-container">
-            <button type="button" class="remove" onclick="removeEducation(this)">Delete</button>
+            <button type="button" class="remove" onclick="removeEducation(this)"><span class="material-icons">delete</span>
+</button>
         </div>
     `;
     educontainer.appendChild(neweduDetails);
@@ -28,7 +29,8 @@ function addSkill(){
     newEntry.innerHTML = `
     <input name="skill" required>
     <div class="but-container">
-    <button type="button" onclick="removeSkill(this)"> Delete</button>
+    <button type="button" onclick="removeSkill(this)"><span class="material-icons">delete</span>
+</button>
     </div>
     `;
 
@@ -50,7 +52,8 @@ function addLang(){
 
         <input name="lang" required>
             <div class="but-container">
-            <button type="button" class="remove" onclick="removeLang(this)"> Delete </button>
+            <button type="button" class="remove" onclick="removeLang(this)"><span class="material-icons">delete</span>
+ </button>
             </div>
         `;
         langContainer.appendChild(newEntry);
@@ -77,10 +80,11 @@ function addProj(){
     <textarea name="pro-desc"></textarea>
     </div>
     <div class="but-container">
-    <button type="button" class="remove" onclick="removeLang(this)"> Delete </button>
+    <button type="button" class="remove" onclick="removeLang(this)"><span class="material-icons">delete</span>
+</button>
     </div>
     <div class="but-container">
-    <button type="button" class="add" onclick="addProj()"> Add </button>
+    <button type="button" class="add" onclick="addProj()"><span class="material-icons">create</span></button>
     </div>`;
 
     ProjContainer.appendChild(newEntry);
@@ -101,7 +105,8 @@ function addCert(){
     
                 <input name="certi-name" type="text">        
                 <div class="but-container">
-                <button type="button" class="remove" onclick="removeCert(this)"> Delete </button>
+                <button type="button" class="remove" onclick="removeCert(this)"><span class="material-icons">delete</span>
+ </button>
                 </div>
                 `;
 
@@ -117,13 +122,14 @@ function removeCert(button){
 function addAch(){
     const Achcontainer = document.querySelector('.achie-container');
     const newEntry = document.createElement('div');
-    newEntry.classList.add('Achievement');
+    newEntry.classList.add('achievement');
 
     newEntry.innerHTML = `
     
                 <input name="achie" type="text">
                 <div class="but-container">
-                <button type="button" class="remove" onclick="removeAch(this)"> Delete </button>
+                <button type="button" class="remove" onclick="removeAch(this)"><span class="material-icons">delete</span>
+</button>
                 </div>
                 `;
 
@@ -144,7 +150,8 @@ function addExtra(){
     newEntry.innerHTML = `
                 <input name="extra" type="text">
                 <div class="but-container">
-                    <button type="button" class="remove" onclick="removeEx(this)"> Delete </button>
+                    <button type="button" class="remove" onclick="removeEx(this)"> <span class="material-icons">delete</span>
+</button>
                 </div>
                 `;
 
