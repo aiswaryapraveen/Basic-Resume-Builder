@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-   
     <form id="details">
         
         <div class="personal-details">
@@ -19,7 +18,7 @@
             <label for="email">Email :</label>
             <input type="email" name="email" placeholder="enter a valid email address" required>
             <label for="number">Phone number : </label>
-            <input type="tel" id="number" name="number" placeholder="enter phone number"required>
+            <input type="number" id="number" name="number" placeholder="enter phone number"required>
             </div>
         </div>
 
@@ -44,12 +43,13 @@
                     <label for="eyear">Passing Year :</label>
                     <input type="number" min="2015" max="2030" name="eyear" required>
                     <div class="but-container">
-                    <button type="button" class="remove" onclick="removeEducation(this)">Delete</button>
+                    <button type="button" class="remove" onclick="removeEducation(this)"><span class="material-icons">delete</span>
+                    </button>
                     </div>
                 </div>
             </div>
             <div class="but-container">
-                <button type="button" class="add" onclick="addEducation()"> Add</button>
+                <button type="button" class="add" onclick="addEducation()"><span class="material-icons">create</span></button>
             </div>
         </div>
         <div class="skill-lang">
@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div class="but-container">
-                <button type="button" class="add" onclick="addSkill()"> Add </button>
+                <button type="button" class="add" onclick="addSkill()"><span class="material-icons">create</span></button>
             </div>
         </div>
         <div class="languages">
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="but-container">
-                <button type="button" class="add" onclick="addLang()"> Add </button>
+                <button type="button" class="add" onclick="addLang()"><span class="material-icons">create</span></button>
             </div>
         </div>
         </div>
@@ -90,10 +90,11 @@
                         <textarea name="pro-desc"></textarea>
                     </div>
                     <div class="but-container">
-                        <button type="button" class="remove" onclick="removeProj(this)"> Delete </button>
+                        <button type="button" class="remove" onclick="removeProj(this)"><span class="material-icons">delete</span>
+                        </button>
                     </div>
                     <div class="but-container">
-                        <button type="button" class="add" onclick="addProj()"> Add </button>
+                        <button type="button" class="add" onclick="addProj()"><span class="material-icons">create</span></button>
                     </div>
                 </div>
                 
@@ -108,7 +109,7 @@
                     </div>
                 </div>
                 <div class="but-container">
-                    <button type="button" class="add" onclick="addCert()"> Add </button>
+                    <button type="button" class="add" onclick="addCert()"><span class="material-icons">create</span></button>
                 </div>
             </div>
             <div class="achievements">
@@ -120,7 +121,7 @@
                     </div>
                 </div>
                 <div class="but-container">
-                    <button type="button" class="add" onclick="addAch()"> Add </button>
+                    <button type="button" class="add" onclick="addAch()"><span class="material-icons">create</span></button>
                 </div>
             </div>
             <div class="extras">
@@ -132,7 +133,7 @@
                     </div>
                 </div>
                 <div class="but-container">
-                    <button type="button" class="add" onclick="addExtra()"> Add </button>
+                    <button type="button" class="add" onclick="addExtra()"><span class="material-icons">create</span></button>
                 </div>
             </div>
             </div>
